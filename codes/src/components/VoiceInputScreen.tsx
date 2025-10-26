@@ -216,8 +216,13 @@ export function VoiceInputScreen({ onConfirm, onBack }: VoiceInputScreenProps) {
                 ? 'bg-gradient-to-br from-red-500 to-red-600 shadow-2xl'
                 : detectedInfo
                 ? 'bg-gradient-to-br from-green-500 to-green-600'
-                : 'bg-gradient-to-br from-purple-500 to-purple-600 shadow-lg'
+                : 'shadow-lg'
             }`}
+            style={
+              !isListening && !detectedInfo
+                ? { background: 'linear-gradient(to bottom right, #00a6f4, #008fd4)' }
+                : undefined
+            }
             animate={{
               scale: isListening ? [1, 1.05, 1] : 1,
             }}
@@ -258,7 +263,7 @@ export function VoiceInputScreen({ onConfirm, onBack }: VoiceInputScreenProps) {
             {isListening ? (
               <span className="text-red-600">Listening...</span>
             ) : isProcessing ? (
-              <span className="text-purple-600">Processing your request...</span>
+              <span style={{ color: '#00a6f4' }}>Processing your request...</span>
             ) : detectedInfo ? (
               <span className="text-green-600">Information captured</span>
             ) : (
