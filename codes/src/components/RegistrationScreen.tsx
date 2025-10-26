@@ -123,7 +123,7 @@ export function RegistrationScreen({ onComplete }: RegistrationScreenProps) {
                     type="text"
                     value={formData.name}
                     onChange={(e) => updateField('name', e.target.value)}
-                    placeholder="e.g., Kwame Mensah"
+                    
                     className={`h-12 ${errors.name ? 'border-red-500' : 'border-gray-300'}`}
                   />
                   {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name}</p>}
@@ -138,7 +138,7 @@ export function RegistrationScreen({ onComplete }: RegistrationScreenProps) {
                     type="number"
                     value={formData.age}
                     onChange={(e) => updateField('age', e.target.value)}
-                    placeholder="e.g., 28"
+                    
                     className={`h-12 ${errors.age ? 'border-red-500' : 'border-gray-300'}`}
                     min="1"
                   />
@@ -154,7 +154,7 @@ export function RegistrationScreen({ onComplete }: RegistrationScreenProps) {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => updateField('phone', e.target.value)}
-                    placeholder="e.g., 0244123456"
+                    
                     className={`h-12 ${errors.phone ? 'border-red-500' : 'border-gray-300'}`}
                   />
                   {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone}</p>}
@@ -169,7 +169,7 @@ export function RegistrationScreen({ onComplete }: RegistrationScreenProps) {
                     type="email"
                     value={formData.email}
                     onChange={(e) => updateField('email', e.target.value)}
-                    placeholder="e.g., kwame@example.com"
+                 
                     className="h-12 border-gray-300"
                   />
                 </div>
@@ -185,7 +185,7 @@ export function RegistrationScreen({ onComplete }: RegistrationScreenProps) {
                     type="text"
                     value={formData.insurance}
                     onChange={(e) => updateField('insurance', e.target.value)}
-                    placeholder="e.g., NHIS, Glico, Enterprise"
+                    
                     className={`h-12 ${errors.insurance ? 'border-red-500' : 'border-gray-300'}`}
                   />
                   {errors.insurance && <p className="text-xs text-red-500 mt-1">{errors.insurance}</p>}
@@ -200,7 +200,7 @@ export function RegistrationScreen({ onComplete }: RegistrationScreenProps) {
                     type="text"
                     value={formData.ghanaCardNo}
                     onChange={(e) => updateField('ghanaCardNo', e.target.value)}
-                    placeholder="e.g., GHA-123456789-0"
+                   
                     className={`h-12 ${errors.ghanaCardNo ? 'border-red-500' : 'border-gray-300'}`}
                   />
                   {errors.ghanaCardNo && <p className="text-xs text-red-500 mt-1">{errors.ghanaCardNo}</p>}
